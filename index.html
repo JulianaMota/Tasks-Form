@@ -8,8 +8,19 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <h1>My task List</h1>
+    <section></section>
+    <template>
+      <article>
+        <h2 data-field="task">Task</h2>
+        <p data-field="date">Date</p>
+        <p data-field="time">Time</p>
+        <button data-field="remove">Task Complete</button>
+      </article>
+    </template>
+    <h2>Add more tasks</h2>
     <form autocomplete="off">
-      <label for="form_task">Task</label>
+      <label for="form_task">Task Title</label>
       <input
         type="text"
         name="task"
@@ -17,6 +28,11 @@
         required
         placeholder="task"
       />
+      <label for="form_date">Task Date</label>
+      <input type="date" name="date" id="form_date" required />
+      <label for="form_hour">Task Hour</label>
+      <input type="time" name="hour" id="form_hour" required />
+      <input type="submit" name="submit" value="Save" />
     </form>
     <script src="index.js"></script>
   </body>
