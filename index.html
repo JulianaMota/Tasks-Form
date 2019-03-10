@@ -8,32 +8,53 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>My task List</h1>
-    <section></section>
-    <template>
-      <article>
-        <h2 data-field="task">Task</h2>
-        <p data-field="date">Date</p>
-        <p data-field="time">Time</p>
-        <button data-field="remove">Task Complete</button>
-      </article>
-    </template>
-    <h2>Add more tasks</h2>
-    <form autocomplete="off">
-      <label for="form_task">Task Title</label>
-      <input
-        type="text"
-        name="task"
-        id="form_task"
-        required
-        placeholder="task"
-      />
-      <label for="form_date">Task Date</label>
-      <input type="date" name="date" id="form_date" required />
-      <label for="form_hour">Task Hour</label>
-      <input type="time" name="hour" id="form_hour" required />
-      <input type="submit" name="submit" value="Save" />
-    </form>
+    <main>
+      <h1>My task List</h1>
+      <section></section>
+      <template>
+        <article>
+          <h2 data-field="task">Task</h2>
+          <p data-field="date">Date: <span></span></p>
+          <p data-field="time">Time: <span></span></p>
+          <button data-field="remove">Task Complete</button>
+        </article>
+      </template>
+    </main>
+    <aside>
+      <h2>Add more tasks</h2>
+      <form autocomplete="off">
+        <label for="form_task">Task Title</label>
+        <div>
+          <input
+            type="text"
+            name="task"
+            id="form_task"
+            required
+            placeholder="Task Title"
+            minlength="4"
+          />
+          <span></span>
+        </div>
+        <label for="form_date">Task Date</label>
+        <div>
+          <input
+            type="date"
+            name="date"
+            id="form_date"
+            required
+            min="2018-01-02"
+            max="2020-01-02"
+          />
+          <span></span>
+        </div>
+        <label for="form_hour">Task Hour</label>
+        <div>
+          <input type="time" name="hour" id="form_hour" required />
+          <span></span>
+        </div>
+        <input type="submit" name="submit" value="Save" id="submit" />
+      </form>
+    </aside>
     <script src="index.js"></script>
   </body>
 </html>

@@ -29,8 +29,8 @@ function displayTasks(task) {
 
   copy.querySelector("[data-field=task]").textContent = task.Task;
   copy.querySelector("article").dataset.id = task._id;
-  copy.querySelector("[data-field=date]").textContent = task.Date;
-  copy.querySelector("[data-field=time]").textContent = task.Hour;
+  copy.querySelector("[data-field=date] span").textContent = task.Date;
+  copy.querySelector("[data-field=time] span").textContent = task.Hour;
   copy.querySelector("[data-field=remove]").addEventListener("click", e => {
     e.target.parentElement.remove();
     removeTask(id);
