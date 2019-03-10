@@ -1,4 +1,5 @@
 window.addEventListener("DOMContentLoaded", init);
+const form = document.querySelector("form");
 
 function init() {
   get();
@@ -39,7 +40,6 @@ function displayTasks(task) {
   document.querySelector("section").appendChild(copy);
 }
 
-const form = document.querySelector("form");
 form.addEventListener("submit", e => {
   form.elements.submit.disabled = true;
   console.log(e);
@@ -81,3 +81,17 @@ function removeTask(id) {
     .then(res => res.json())
     .then(data => console.log(data));
 }
+
+form.elements.task.addEventListener("blur", e => {
+  if (form.elements.task.checkValidity()) {
+  } else {
+    alert("Write at leat 4 letters and no space on the begining");
+  }
+});
+
+form.elements.date.addEventListener("blur", e => {
+  if (form.elements.date.checkValidity()) {
+  } else {
+    alert("You can only add tasks from 2019 until 2020");
+  }
+});
