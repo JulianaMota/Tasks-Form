@@ -92,6 +92,6 @@ form.elements.task.addEventListener("blur", e => {
 form.elements.date.addEventListener("blur", e => {
   if (form.elements.date.checkValidity()) {
   } else {
-    alert("You can only add tasks from 2019 until 2020");
+    //alert("You can only add tasks from 2019 until 2020");
   }
 });
